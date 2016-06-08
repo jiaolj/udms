@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="{%static 'css/base.css'%}"/>
+{%block css%}{%endblock%}
+<!--[if IE]> <script>location.href='http://f.jiaolj.com/htm/ie/index.html';</script> <![endif]-->
+</head>
+<body>
+<nav>
+	<dl class="menu-left">
+		<a href="/"><dt class="logo" ><img src="{%static 'img/cdc_logo.png'%}" /></dt></a>
+		<!--<a href="/"><dt class="menu {%ifequal req.path '/'%}active{%endifequal%}">主页</dt></a>-->
+		<a href="/monitor/"><dt class="menu {%ifequal req.path '/monitor/'%}active{%endifequal%}{%ifequal req.path '/analyze/'%}active{%endifequal%}">监控</dt></a>
+		<a href="/report/"><dt class="menu {%ifequal req.path '/report/'%}active{%endifequal%}">报告</dt></a>
+		<br class="cb"/>
+	</dl>
+	<dl class="menu-right" id="menu-right">
+		<dt>
+			<a class="nohide">保存</a>
+			<dl class="hidediv nohide">
+				<dt class="nohide">保存可视化到...</dt>
+				<dt class="nohide" id="newReport"><a class="nohide">新建报告</a></dt>
+				<dt class="nohide" id="choiceReport"><a class="nohide">保存到已有报告...</a></dt>
+			</dl>
+		</dt>
+		<dt>
+			<a>guest</a>
+		</dt>
+		<br class="cb"/>
+	</dl>
+	<br class="cb"/>
+</nav>
+<content>
+{%block content%}{%endblock%}
+</content>
+<footer>
+	<p>
+	Copyright © 2015 Digital media Computing &amp; Design Lab, ZJU &nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备15025990号-1</a>
+	</p>
+</footer>
+<script src="{% static 'js/dist/echarts.js' %}"></script>
+<script src="{% static 'js/base.js' %}"></script>
+{%block js%}{%endblock%}
+</body>
+</html>

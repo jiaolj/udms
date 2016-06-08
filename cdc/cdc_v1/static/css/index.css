@@ -1,0 +1,36 @@
+section {
+  width: 100%;
+  height: 100%;
+}
+section .bgimg {
+  position: absolute;
+}
+section dl {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  bottom: 20%;
+  left: 15%;
+}
+section dl dt {
+  float: left;
+  width: 29%;
+  height: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background: #9d9d9d;
+}
+section dl dt p {
+  height: 100%;
+}
+section dl dt p img {
+  height: 80%;
+  width: 100%;
+}
+section dl dt p b {
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 500;
+}

@@ -1,0 +1,106 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+{%block css%}<link rel="stylesheet" href="{%static 'css/monitor.css'%}"/>{%endblock%}
+{%block js%}
+<script src="{% static 'js/My97DatePicker/WdatePicker.js' %}" data-dojo-config="async:true"></script>
+<script src="{% static 'js/monitor.js' %}"></script>
+{%endblock%}
+{%block content%}
+<section>
+	<div class="tip" id="ctip" auto="3">
+		<div class="tit">标题： 新闻标题</div>
+		<div class="data">摘要：新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容</div>
+	</div>
+	<div class="choice-concept">
+		<a class="close">×</a>
+		<dl id="choicecdl">
+			<dt><input type="checkbox" />鼠疫</dt>
+			<dt><input type="checkbox" />霍乱</dt>
+			<dt><input type="checkbox" />艾滋</dt>
+			<dt><input type="checkbox" />肝炎</dt>
+		</dl>
+	</div>
+	<div class="setting">
+		<div class="set">
+			<a class="tit" id="openSettings">搜索条件设置</a>
+			<div id="stext" class="text">
+				<em><em></em></em>
+				<a class="close">×</a>
+				<table cellspacing="0" cellpadding="5">
+					<tr><td>疾病名称</td><td class="kwds">
+					<div class="box">
+						<input type="button" class="setbtn" parid="1" value="设置"/>
+						<abbr id="setbtn1">
+						</abbr>
+					</div>
+					</td></tr>
+					<tr><td>疾病症状</td><td class="kwds">
+					<div class="box">
+						<input type="button" class="setbtn" parid="48" value="设置"/>
+						<abbr id="setbtn2">
+						</abbr>
+					</div>
+					</td></tr>
+					<tr><td>关键词</td><td class="kwd"><input type="text" id="keyword"/><dl class="tips" id="kwdtips"></dl></td></tr>
+					<tr><td>时间</td><td><input type="text" class="date" id="bgtm" onclick="WdatePicker()"/><br /><input class="date" type="text" id="edtm" onclick="WdatePicker()"/></td></tr>
+					<tr><td><input type="button" id="setok" value="确定"></td><td></td></tr>
+				</table>
+			</div>
+		</div>
+		<div class="setshow">
+			<dl>
+				<dt parid="1">疾病名称：<abbr id="setshow1"></abbr></dt>
+				<dt parid="48">疾病症状：<abbr id="setshow2"></abbr></dt>
+				<br class="cb"/>
+			</dl>
+		</div>
+		<dl class="data" id="chartMenu">
+			<dt class="active" t="tml">时间线</dt>
+			<dt t="map">地域分布</dt>
+			<dt t="word">词云</dt>
+			<dt t="people" style="color:#ccc">人群特征分布</dt>
+		</dl>
+		<br class="cb"/>
+	</div>
+	<div class="cnt">
+		<div class="chart" id="chart"></div>
+		<div class="tipdata" id="circle"></div>
+		<svg id="circle1" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+		</svg>
+	</div>
+	<div class="timeline">
+		<div class="data">
+			<div class="lft box">
+				<a>+</a>
+				<span id="allbegin"></span>
+				<a>-</a>
+			</div>
+			<div class="main" id="main">
+				<div class="drag" id="box">
+					<div class="set"><span>1</span>
+						<div class="setip">
+							<dl>
+								<dt d="365">1年</dt>
+								<dt d="90">3月</dt>
+								<dt d="30">1月</dt>
+								<dt d="7">1周</dt>
+								<dt class="active" d="1">1天</dt>
+							</dl>
+						</div>
+					</div>
+					<div class="lft txt" id="begin"></div>
+					<div class="rit txt" id="end"></div>
+					<div class="lft txtbar" id="tleft"></div>
+					<div class="rit txtbar" id="tright"></div>
+					<div class="move" id="bar"></div>
+				</div>
+			</div>
+			<div class="rit box">
+				<a>+</a>
+				<span id="allend"></span>
+				<a>-</a>
+			</div>
+		</div>
+	</div>
+</section>
+{%endblock%}

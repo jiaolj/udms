@@ -1,0 +1,77 @@
+@import 'pub.less';
+@navh:46px;@footh:40px;
+
+a{.tdn;.csr;.c(#333)}
+ul{list-style:none;.pdl}
+h1,h2,p,ul,dl,ol{.mg}
+img{.bd(#fff,0);.w;.h}
+.cb{.cb}
+html {.h}
+body{
+	.w;.h;.mg(0 auto);.ffmy;.c(#333);
+}
+nav {
+	.psa;
+	.w;
+	.h(@navh);
+	.bdb(#000);
+	.bglg(#56585d,#2f3034);
+	dl {
+		dt {
+			.flt;
+			.lh(@navh);
+			.c(#999);
+			&.logo {
+				.w(100px);
+				.h(@navh);
+				.mgl(20px);
+				.mgr(40px);
+			}
+			&.menu {
+				.pdl(10px);
+				.pdr(10px);
+				&.active {
+					.c(#fff);
+				}
+			}
+		}
+		&.menu-left {
+			.flt;
+		}
+		&.menu-right {
+			.frt;.mgr(4%);
+			dt {
+				a{.c(#fff)};.psr;
+				.c(#fff);
+				.w(90px);
+				.hidediv {
+					.dsn;.w(180px);.pd(6px 20px);.t(@navh);.l(-80px);
+					.psa;.zi;.bgimg(bottom,0,0,0,0.7,0.1);
+					dt {
+						.lh(26px);.w;
+						a {
+							.ti;.dsb;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+content {
+	.psa;.t(@navh);.b(@footh+8);
+	.w;
+}
+footer {
+	.psa;
+	.b;
+	.w;
+	.h(@footh);
+	.bg(#000);
+	p {
+		.lh(@footh);
+		.c(#999);
+		.tct;
+		a {.c(#555)}
+	}
+}

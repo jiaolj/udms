@@ -1,0 +1,189 @@
+@import 'pub.less';
+body {
+	.bg(url('../img/monitor_bg.gif'));
+}
+.kwdspan(){
+	span {
+		.psr;.mgr(10px);.mgl(2px);.fs(0.9em);
+		a {
+			.psa;.dsb;.r(-10px);.t;.lh(8px);.h(8px);
+		}
+	}
+}
+section {
+	.w;.h;
+	.close {
+		.psa;.r(1%);.t;.lh(16px);
+	}
+	.setting {
+		.bg(#f5f5f5);
+		.fs(0.94em);
+		.bdb(#ccc);
+		@seth:46px;
+		.set{
+			.flt;.mgl(2%);
+			.tit {
+				.lh(@seth);
+				&:hover{.c(#01c)}
+			}
+			.text {
+				.dsn;.psa;.zi(2);.t(42px);.bg;.w(300px);.br(5px);.pd(8px);.bs;.bd(#ccc);
+				>em {
+					.trig(0 10px 10px,transparent transparent #ccc,40px,-10px);
+					em {.trig}
+				}
+				table {
+					.w;
+					td{
+						&:nth-child(1){
+							.w(35%);
+						}
+						&:nth-child(2){
+							.w(65%);
+						}
+						input.date {
+							.mgt(4px);.ti(0.5em);
+						}
+						&.kwds {
+							.box {
+								.ofh;.lh(32px);.h(32px);
+								.kwdspan;
+							}
+						}
+						&.kwd {
+							.psr;
+							.tips {
+								.dsn;.psa;.t(26px);.bd(#4796F9);.w(151px);.bg;.ti;.br(0 0 4px 4px);.pdt(6px);.pdb(6px);.mxh(300px);.ofa;
+								dt{
+									.lh(22px);.csr;
+									&.active,&:hover {
+										.bg(#F0F0F0);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.setshow {
+			.flt;.mgl(5%);.lh(24px);.fs(0.8em);
+			dl {
+				dt {
+					.flt;.mg(6px);.bd;.pd(4px 16px);.psr;
+					.kwdspan;
+				}
+			}
+		}
+		.data{
+			.frt;.mgr(2%);.lh(@seth);
+			dt {
+				.flt;.csr;
+				.pdl(12px);
+				.pdr(12px);
+				&.active{
+					.bg(#e0e0e0)
+				}
+			}
+		}
+	}
+	.cnt {
+		.psa;.l(3%);.w(94%);.b(20px);.t(66px);
+		.chart {
+			.psa;.t;.w;.h;.zi;
+		}
+		svg {
+			.psa;.t;.zi(-1);
+			circle {
+				&:hover {
+					.csr;
+				}
+			}
+		}
+		.tipdata {
+			.psa;.t;.w;.h;
+			.circle {
+				.w(20px);.h(20px);.psa;.bd(#6FB2CC);.br;
+				&:hover {
+					.csr;
+				}
+			}
+		}
+		.echarts-tooltip a {
+			.c(#fff);
+			&:hover{.tdn(underline)}
+		}
+	}
+	.timeline {
+		.psa;.b(8px);.h(30px);.w;
+		.data {
+			.w(60%);.h;.mgl(20%);.psr;
+			.main {
+				.w;.h(20px);.mgt(5px);.bdb(#666);.bdl(#666);.bdr(#666);.psr;
+				.drag {
+					.psa;.w(30%);.h;.bdt(#666);.bdl(#666);.bdr(#666);.l(70%);
+					.move {
+						.w;.h;.psa;.zi(3);.csr(ew-resize);
+					}
+					.set {
+						.psa;.zi(4);.h(19px);.lh(19px);.w(20%);.l(40%);.bdl(#666);.bdr(#666);.tct;.fs(0.8em);.csr;.bg;
+						.setip {
+							.dsn;.psa;.l(-1px);.t(-112px);.w;.bdt;.bdl;.bdr;.bg(#555);
+							dt {
+								.lh(22px);.c(#fff);
+								&.active {
+									.bg(#444);
+								}
+								&:hover {
+									.bg(#333);
+								}
+							}
+						}
+					}
+					.txt {
+						.psa;.lh(19px);.fs(0.8em);
+						&.lft {
+							.l(2px);.zi(-1);
+						}
+						&.rit {
+							.r(2px);.zi(-1);
+						}
+					}
+					.txtbar {
+						.psa;.w(12px);.h(19px);.t(-1px);
+						&.lft {
+							.bdl(#666);.l(-12px);.bdt(#666);.bdb(#666);.psa;.csr(move);.zi(2);
+						}
+						&.rit {
+							.bdr(#666);.r(-12px);.bdt(#666);.bdb(#666);.psa;.csr(move);.zi(2);
+						}
+					}
+				}
+			}
+			.box {
+				.psa;.t;
+				&.lft{
+					.l(-130px);
+				}
+				&.rit{
+					.r(-130px);
+				}
+			}
+		}
+	}
+	.tip {
+		.dsn;.zi;.psa;.bd;.bs;.bg;.pd(8px);.br(6px);.w(180px);
+	}
+	.choice-concept {
+		.dsn;.psa;.l(346px);.t(10%);.w(40%);.h(70%);.bg;.zi(3);.br(6px);.bs;.pd(2%);.ofa;
+		dl {
+			.w(80%);.mg(0 auto);
+			dt {
+				.lh(32px);
+				input {
+					.mgr(10px);
+				}
+			}
+		}
+	}
+}
